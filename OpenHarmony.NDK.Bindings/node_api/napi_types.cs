@@ -131,6 +131,12 @@ public enum napi_threadsafe_function_call_mode
     napi_tsfn_blocking,    // The call may block the calling thread.
 }
 
+public enum napi_threadsafe_function_release_mode
+{
+    napi_tsfn_release,
+    napi_tsfn_abort,
+}
+
 public enum napi_valuetype
 {
     // ES6 types (corresponds to typeof)

@@ -359,6 +359,10 @@ public static unsafe partial class node_api
         void *data,
         napi_threadsafe_function_call_mode is_blocking);
 
+    [LibraryImport("libace_napi.z.so")]
+    public static partial napi_status napi_release_threadsafe_function(napi_threadsafe_function func,
+        napi_threadsafe_function_release_mode mode);
+
     // Methods to work with external data objects
     [LibraryImport("libace_napi.z.so")]
     public static partial napi_status napi_wrap(napi_env env,
